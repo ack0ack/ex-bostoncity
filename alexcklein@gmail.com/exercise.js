@@ -6,7 +6,7 @@ exercise.maxSalary = function() {
     var dataLength = exercise.data.data.length;
     var currentSalary = 0;
     for (var i = 0; i < dataLength; i++) {
-        var currentSalary = exercise.data.data[i][18];
+        var currentSalary = Number(exercise.data.data[i][18]);
         if (currentSalary > currentMax){
             currentMax = currentSalary;
         }
@@ -23,7 +23,7 @@ exercise.salariesAbove = function(salary) {
     var currentSalary = 0
     
     for (var i = 0; i < dataLength; i++) {
-        currentSalary = exercise.data.data[i][18];
+        currentSalary = Number(exercise.data.data[i][18]);
         if (currentSalary > salary){
             num_salaries++; 
         }
