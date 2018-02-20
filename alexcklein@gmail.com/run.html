@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<!-- document style -->
+<style>
+    .format {
+        font-size: 1.5em;
+        font-family: arial
+    }
+</style>
+
+<!-- load library -->
+<script src="exercise.js"></script>
+<script src="data.js"></script>
+<!-- buttons used to call functions -->
+<button onclick="callFirst()" class="format">Get Max Salary</button>
+<div id='firstResponse'></div><br>
+
+<button onclick="callSecond()" class="format">Number above 150,000</button>
+<div id='secondResponse'></div><br>
+
+<script>
+    exercise.data = data;
+
+    function callFirst() {
+        var response = exercise.maxSalary();
+        document.getElementById('firstResponse').innerHTML = response;
+    }
+
+    function callSecond() {
+        var response = exercise.salariesAbove(150000);
+        document.getElementById('secondResponse').innerHTML = response;
+    }
+</script>
+
+</html>
