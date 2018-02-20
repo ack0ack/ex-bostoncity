@@ -4,11 +4,11 @@ var exercise = {};
 exercise.maxSalary = function() {
     var currentMax = 0.0;
     var dataLength = exercise.data.data.length;
-    var currentSalary = Number(exercise.data.data);
+    var currentSalary = 0;
     for (var i = 0; i < dataLength; i++) {
-        var currentSalary = Number(exercise.data.data);
-        if (currentSalary[i][18] > currentMax){
-            currentMax = currentSalary[i][18];
+        var currentSalary = exercise.data.data[i][18];
+        if (currentSalary > currentMax){
+            currentMax = currentSalary;
         }
         // update current salary
         // store in currentMax if it is greater than currentMax
